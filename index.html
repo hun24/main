@@ -9,11 +9,23 @@
 <body>
 	<p><h1>가족 홈페이지</h1></p>
 	<p id="test">준비중입니다</p>
-	<button onclick = "doSomething()">빨리 업데이트 해줘</button>
 	<script type="text/javascript">
-		function doSomething(){
-			documnt.getElementById("test").innerHTML = "아이디어 내놔"
-		}
-	</script>
+
+        // 버튼 클릭 이벤트
+        function innerSample1() {
+        // span 문자열 변경
+        document.getElementById("test1").innerHTML = "Hello！";
+        }
+
+        </script>
+
+<div style="background-color : #CCC;">
+    <form>
+        <span id="test1" style="font-size: 120%;">안녕하세요</span>
+        <br/>
+        <br/>
+        <input type="button" value="버튼" onClick="innerSample1()">
+    </form>
+</div>
 </body>
 </html>
