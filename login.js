@@ -6,6 +6,7 @@ document.querySelector("#btn").addEventListener("click", () => {
     if(id == document.querySelector("#id").value) {
         if(password == document.querySelector("#password").value) {
             alert("환영합니다!");
+            location.href = ""; //
             //document.write("환영합니다!");
         }
         else {
