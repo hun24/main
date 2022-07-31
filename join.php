@@ -10,9 +10,13 @@
         <?php if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) { ?>
         <form method="post" action="join_ok.php" autocomplete="off">
             <p>이름: <input type="text" name="join_name" required></p>
-            <p>아이디: <input type="text" name="join_id" required></p>
+            <p>아이디: <input type="text" name="join_id" id="uid" required></p>
+            <input type="hidden" name="decide_id" id="decide_id">
+            <p><span id="decide" style='color:red;'>ID 중복 여부를 확인해주세요.</span>
+            <input type="button" id="check_button" value="ID 중복 검사" onclick="checkid();"></p>
             <p>비밀번호: <input type="password" name="join_pw" required></p>
-            <p><input type="submit" value="가입하기"></p>
+            <p>비밀번호 확인: <input type="password" name="join_pw2" required></p>
+            <p><input type="submit" id="join_button" value="가입하기" disabled=true></p>
         </form>
         <small><a href="login.php">이미 회원이신가요?</a><small>
         <?php } else {
