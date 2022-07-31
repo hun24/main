@@ -14,6 +14,14 @@
 		        alert("아이디를 입력하세요.");
 	        }
         }
+	function decide(){
+		document.getElementById("decide").innerHTML = "<span style='color:red;'>ID 중복 여부를 확인해주세요.</span>"
+		document.getElementById("decide_id").value = document.getElementById("uid").value
+		document.getElementById("uid").disabled = true
+		document.getElementById("join_button").disabled = false
+		document.getElementById("check_button").value = "다른 ID로 변경"
+		document.getElementById("check_button").setAttribute("onclick", "change()")
+	}
     </head>
     <body>
         <h2>회원가입</h2>
